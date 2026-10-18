@@ -1,0 +1,14 @@
+# Local orchestration, credentials, and generated artifacts are not publication inputs.
+/.spec-runs/
+**/.git/
+**/target/
+**/__pycache__/
+*.py[cod]
+.env
+.env.*
+*.pem
+*.key
+/.venv/
+/checkpoints/
+/models/
+/runs/

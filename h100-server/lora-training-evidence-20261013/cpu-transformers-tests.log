@@ -1,0 +1,75 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.35s
+     Running unittests src/lib.rs (target/debug/deps/candle_transformers-fca2e3178f76265c)
+
+running 22 tests
+test models::gemma4::config::tests::dense_defaults_and_k_equals_v_are_supported ... ok
+test models::gemma4::config::tests::nested_rope_parameters_and_legacy_fallbacks ... ok
+test models::gemma4::config::tests::nonfinite_values_are_rejected_for_programmatic_configs ... ok
+test models::gemma4::config::tests::real_variant_flags_are_reported_together ... ok
+test models::gemma4::config::tests::malformed_shapes_and_types_are_rejected ... ok
+test models::quantized_llama::tests::causal_mask_broadcasts_to_attention_shape ... ok
+test models::quantized_llama::tests::causal_mask_rectangular_shape ... ok
+test models::quantized_llama::tests::causal_mask_rectangular_values ... ok
+test models::quantized_llama::tests::causal_mask_single_query_with_prefix ... ok
+test models::quantized_llama::tests::causal_mask_square_shape ... ok
+test models::quantized_llama::tests::causal_mask_square_values ... ok
+test models::segformer::tests::test_config_json_load ... ok
+test models::whisper::audio::tests::test_dft ... ok
+test models::gemma4::text::lora_tests::frozen_qmatmul_exact_input_gradient_and_detached_backward ... ok
+test models::whisper::audio::tests::test_fft ... ok
+test models::whisper::audio::tests::test_tiny_log_mel_spectrogram ... ok
+test utils::tests::additive_causal_mask_handles_kv_cache_offset ... ok
+test utils::tests::additive_causal_mask_is_batch_independent_and_broadcasts ... ok
+test utils::tests::additive_causal_mask_respects_sliding_window ... ok
+test models::mimi::conv::tests::conv1d ... ok
+test models::mimi::conv::tests::conv_tr1d ... ok
+test models::whisper::audio::tests::test_log_mel_spectrogram ... ok
+
+test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.74s
+
+     Running tests/gemma4_lora_tests.rs (target/debug/deps/gemma4_lora_tests-dfd63399a02acc61)
+
+running 5 tests
+test rejects_invalid_or_duplicate_adapters_without_allocating_variables ... ok
+test q4_gradients_cross_two_layers_and_match_numerical_reference ... ok
+test streamed_constructors_match_conversion_and_reject_trainable_base ... ok
+test q4_bf16_cpu_master_casts_are_fresh ... ok
+test q4_f32_updates_every_adapter_and_freezes_base ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.10s
+
+     Running tests/gemma4_quantized_decoder_tests.rs (target/debug/deps/gemma4_quantized_decoder_tests-663c2d7e8108b302)
+
+running 3 tests
+test rejects_trainable_weights_including_gradient_dependencies_before_conversion ... ok
+test rejects_unsupported_dtypes_and_unaligned_projection_dimensions ... ok
+test frozen_q4_q8_features_and_logits_stay_finite_and_close_to_dense ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.96s
+
+     Running tests/gemma4_tests.rs (target/debug/deps/gemma4_tests-5d543d2b992710af)
+
+running 6 tests
+test missing_tensors_report_checkpoint_paths ... ok
+test checkpoint_prefixes_and_root_untied_head_match ... ok
+test last_layer_scalar_and_final_softcap_affect_logits ... ok
+test prevalidation_errors_preserve_cache_and_reset_allows_reuse ... ok
+test cached_decoding_matches_fresh_prefills_across_local_window ... ok
+test official_transformers_5_19_0_golden_prefills_and_cached_tokens ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.64s
+
+     Running tests/gemma4_training_tests.rs (target/debug/deps/gemma4_training_tests-c9c30dcf48500ee7)
+
+running 6 tests
+test attention_gradients_match_finite_differences_through_rope_and_softmax ... ok
+test qkv_and_mlp_gradients_are_finite_nonzero_and_update_parameters ... ok
+test training_validates_inputs_without_affecting_cache ... ok
+test training_is_causal_and_neither_reads_nor_changes_inference_cache ... ok
+test trained_checkpoint_roundtrip_preserves_logits_and_trainability ... ok
+test all_training_positions_match_inference_prefixes_and_cached_tokens ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.36s
+

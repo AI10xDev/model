@@ -1,0 +1,44 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.46s
+     Running unittests examples/gemma4/main.rs (target/debug/examples/gemma4-59e1fbbd228c8f59)
+
+running 6 tests
+test tests::formats_single_turn_without_thinking_and_preserves_raw_prompt ... ok
+test tests::prompt_encoding_does_not_add_duplicate_bos ... ok
+test tests::rejects_unsupported_configs_in_both_layouts ... ok
+test tests::requires_explicit_model_selection ... ok
+test tests::extracts_both_checkpoint_layouts_and_propagates_flash ... ok
+test tests::stops_on_eos_turn_end_and_tool_handoff_not_legacy_eos ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests examples/gemma4-training/main.rs (target/debug/examples/gemma4_training-cf678999550d8b7f)
+
+running 23 tests
+test dataset::tests::deterministic_document_split_and_packing ... ok
+test dataset::tests::high_u32_ids_and_shift_boundaries ... ok
+test dataset::tests::preprocessing_keeps_high_special_ids_without_implicit_bos ... ok
+test dataset::tests::malformed_and_empty_records_are_not_dropped ... ok
+test dataset::tests::preprocessing_round_trip_and_provenance ... ok
+test dataset::tests::rejects_truncation_empty_data_and_bad_dimensions ... ok
+test dataset::tests::rejects_zero_token_records_and_invalid_tokenizer_ids ... ok
+test dataset::tests::rejects_missing_usable_splits_and_invalid_specials ... ok
+test dataset::tests::saved_padding_and_truncation_do_not_drop_or_add_tokens ... ok
+test tests::checkpoint_index_rejects_nonlocal_and_empty_shards ... ok
+test tests::cli_requires_explicit_initialization_and_rejects_conflicting_devices ... ok
+test tests::gradient_clipping_uses_global_norm_and_rejects_nonfinite_or_missing_gradients ... ok
+test tests::parameter_estimate_matches_allocated_tied_bias_and_shared_kv_variants ... ok
+test adapter::tests::adapter_numerical_gradients_cpu ... ok
+test tests::accumulation_matches_large_batch_including_short_epoch_tail ... ok
+test tests::rejects_config_and_parameter_cap_before_dataset_or_output_allocation ... ok
+test tests::rejects_whole_window_truncation_and_inconsistent_metadata_without_output ... ok
+test tests::preprocess_train_and_warm_start_cpu ... ok
+test tests::sharded_weights_load_exact_values_convert_dtype_and_reject_missing_data ... ok
+test tests::validates_initializer_and_dropout_for_flat_and_nested_configs_before_allocation ... ok
+test adapter::tests::quantized_adapter_training_cpu ... ok
+test tests::scratch_initialization_uses_config_std_and_preserves_norms_and_scalars ... ok
+test tests::quantized_head_checkpoint_roundtrip_and_policy_validation ... ok
+
+test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.72s
+

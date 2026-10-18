@@ -1,0 +1,8 @@
+avx: true, neon: false, simd128: false, f16c: true
+temp: 0.00 repeat-penalty: 1.00 repeat-last-n: 64
+retrieved the files in 936.664771ms
+loaded the model in 132.109765791s
+synthetic capacity probe: 32768 prompt tokens, 2 requested samples (prompt not printed)
+. 
+2 tokens generated (0.01 token/s)
+report written to /home/azureuser/gemma4/context-evidence-20261016/probe-32768.json

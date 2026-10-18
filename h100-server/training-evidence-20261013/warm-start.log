@@ -1,0 +1,26 @@
+quantizing frozen decoder to Q4_0
+parameters=30697345340 initial_validation_loss=4.572752
+{"gradient_norm":18.573865114971174,"step":1,"tokens_seen":32,"train_loss":2.4676289558410645,"validation_loss":4.5015552043914795}
+	Command being timed: "/home/azureuser/candle/target/release/examples/gemma4-training train --config /home/azureuser/gemma4/checkpoint/config.json --checkpoint /home/azureuser/gemma4/checkpoint --dataset /home/azureuser/gemma4/head-q4-bf16-smoke-20261013/data --output /home/azureuser/gemma4/head-q4-bf16-smoke-20261013/warm-start --adapter-checkpoint /home/azureuser/gemma4/head-q4-bf16-smoke-20261013/run/checkpoint-20 --mode quantized-head --quantization q4-0 --precision bf16 --lora-rank 8 --lora-alpha 8 --max-parameters 32000000000 --steps 1 --batch-size 1 --learning-rate 0.001 --weight-decay 0 --eval-every 1 --eval-batches 2 --save-every 1 --cuda"
+	User time (seconds): 74.63
+	System time (seconds): 64.04
+	Percent of CPU this job got: 100%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:18.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 60634744
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 32815752
+	Voluntary context switches: 2797
+	Involuntary context switches: 400
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 142496
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

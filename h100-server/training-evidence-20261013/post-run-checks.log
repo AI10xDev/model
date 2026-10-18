@@ -1,0 +1,6 @@
+/home/azureuser/candle/target/release/examples/gemma4-training: OK
+/home/azureuser/candle/candle-examples/examples/gemma4-training/fixtures/train.jsonl: OK
+/home/azureuser/gemma4/checkpoint/config.json: OK
+index, name, memory.used [MiB]
+0, NVIDIA H100 NVL, 0 MiB
+pid, process_name, used_gpu_memory [MiB]

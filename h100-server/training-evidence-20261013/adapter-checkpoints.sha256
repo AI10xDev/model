@@ -1,0 +1,3 @@
+1a3a1dd6a9a649b8526c1300fcb4213346697c9d868bac7dfe71ac5af904d33b  /home/azureuser/gemma4/head-q4-bf16-smoke-20261013/run/checkpoint-10/adapter.safetensors
+fc5630f4bf2187e94051f71e1faa4f831899e3d0af4103d08e92e099c4bab0e1  /home/azureuser/gemma4/head-q4-bf16-smoke-20261013/run/checkpoint-20/adapter.safetensors
+c422b2d4d5c39c089c75a6f5ce2d7c79e09a904db7b42294176b133a2697cb38  /home/azureuser/gemma4/head-q4-bf16-smoke-20261013/warm-start/checkpoint-1/adapter.safetensors

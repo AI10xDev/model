@@ -1,0 +1,38 @@
+{
+  "bos_token_id": 2,
+  "eos_token_id": 1,
+  "format_version": 1,
+  "input": "/home/azureuser/candle/candle-examples/examples/gemma4-training/fixtures/train.jsonl",
+  "layout": "contiguous token stream, no header or padding",
+  "seed": 42,
+  "sequence_length": 32,
+  "split_algorithm": "rand 0.9 StdRng seeded shuffle; first floor(documents * validation_fraction) documents are validation",
+  "stride": 32,
+  "token_format": "u32-le",
+  "tokenizer": {
+    "add_special_tokens": false,
+    "bytes": 32169626,
+    "copy": "tokenizer.json",
+    "padding": false,
+    "source": "/home/azureuser/gemma4/checkpoint/tokenizer.json",
+    "truncation": false,
+    "vocabulary_entries_including_added": 262144
+  },
+  "train": {
+    "documents": 9,
+    "dropped_tail_tokens": 9,
+    "stored_tokens": 225,
+    "tokens_before_packing": 234,
+    "windows": 7
+  },
+  "valid": {
+    "documents": 3,
+    "dropped_tail_tokens": 13,
+    "stored_tokens": 65,
+    "tokens_before_packing": 78,
+    "windows": 2
+  },
+  "validation_fraction": 0.25,
+  "vocab_size": 262144,
+  "window_length": 33
+}

@@ -1,0 +1,4 @@
+loading frozen decoder layer-by-layer with Q4_0 weights
+parameters=30697345340 initial_validation_loss=1.045797
+{"gradient_norm":22.16476915425661,"step":1,"tokens_seen":1024,"train_loss":1.5320097208023071}
+{"gradient_norm":5.198069122457114,"step":2,"tokens_seen":2048,"train_loss":0.2918681353330612,"validation_loss":0.376128613948822}

@@ -1,0 +1,10 @@
+#cloud-config
+package_update: true
+packages:
+  - python3-venv
+  - python3-pip
+  - git
+  - curl
+  - jq
+ssh_pwauth: false
+disable_root: true

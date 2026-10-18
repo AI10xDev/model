@@ -1,0 +1,171 @@
+Oct 13 11:35:44 gemma-h100-aue systemd[1]: Started /bin/bash /home/azureuser/gemma4/build-gemma4-training.sh.
+Oct 13 11:35:45 gemma-h100-aue bash[53840]: warning: candle-kernels@0.11.0: Compiling 11 of 11 PTX kernels
+Oct 13 11:35:45 gemma-h100-aue bash[53840]: warning: candle-kernels@0.11.0: Using 20 threads for compilation
+Oct 13 11:35:45 gemma-h100-aue bash[53840]: warning: candle-kernels@0.11.0: Compiling 15 of 15 kernels
+Oct 13 11:35:45 gemma-h100-aue bash[53840]: warning: candle-examples@0.11.0: Compiling 1 of 1 PTX kernels
+Oct 13 11:35:45 gemma-h100-aue bash[53840]:    Compiling candle-transformers v0.11.0 (/home/azureuser/candle/candle-transformers)
+Oct 13 11:35:57 gemma-h100-aue bash[53840]:    Compiling candle-examples v0.11.0 (/home/azureuser/candle/candle-examples)
+Oct 13 11:36:06 gemma-h100-aue bash[53840]:     Finished `release` profile [optimized] target(s) in 21.92s
+Oct 13 11:36:06 gemma-h100-aue bash[53998]: warning: candle-kernels@0.11.0: Compiling 11 of 11 PTX kernels
+Oct 13 11:36:06 gemma-h100-aue bash[53998]: warning: candle-kernels@0.11.0: Using 20 threads for compilation
+Oct 13 11:36:06 gemma-h100-aue bash[53998]: warning: candle-kernels@0.11.0: Compiling 15 of 15 kernels
+Oct 13 11:36:06 gemma-h100-aue bash[53998]: warning: candle-examples@0.11.0: Compiling 1 of 1 PTX kernels
+Oct 13 11:36:06 gemma-h100-aue bash[53998]:    Compiling candle-examples v0.11.0 (/home/azureuser/candle/candle-examples)
+Oct 13 11:36:10 gemma-h100-aue bash[53998]:     Finished `release` profile [optimized] target(s) in 3.66s
+Oct 13 11:36:10 gemma-h100-aue bash[53998]:      Running unittests examples/gemma4-training/main.rs (target/release/examples/gemma4_training-d80e7a43d9b4d3dd)
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: running 25 tests
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test dataset::tests::deterministic_document_split_and_packing ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test dataset::tests::high_u32_ids_and_shift_boundaries ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test dataset::tests::rejects_truncation_empty_data_and_bad_dimensions ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::gradient_clipping_uses_global_norm_and_rejects_nonfinite_or_missing_gradients ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::cli_requires_explicit_initialization_and_rejects_conflicting_devices ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test dataset::tests::rejects_zero_token_records_and_invalid_tokenizer_ids ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test dataset::tests::preprocessing_keeps_high_special_ids_without_implicit_bos ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::checkpoint_index_rejects_nonlocal_and_empty_shards ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test dataset::tests::saved_padding_and_truncation_do_not_drop_or_add_tokens ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test dataset::tests::rejects_missing_usable_splits_and_invalid_specials ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test dataset::tests::preprocessing_round_trip_and_provenance ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test dataset::tests::malformed_and_empty_records_are_not_dropped ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::scratch_initialization_uses_config_std_and_preserves_norms_and_scalars ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::parameter_estimate_matches_allocated_tied_bias_and_shared_kv_variants ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::rejects_config_and_parameter_cap_before_dataset_or_output_allocation ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::sharded_weights_load_exact_values_convert_dtype_and_reject_missing_data ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::rejects_whole_window_truncation_and_inconsistent_metadata_without_output ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::validates_initializer_and_dropout_for_flat_and_nested_configs_before_allocation ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::preprocess_train_and_warm_start_cpu ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test tests::accumulation_matches_large_batch_including_short_epoch_tail ... ok
+Oct 13 11:36:10 gemma-h100-aue bash[54127]: test adapter::tests::adapter_numerical_gradients_cpu ... ok
+Oct 13 11:36:11 gemma-h100-aue bash[54127]: test adapter::tests::adapter_numerical_gradients_cuda ... ok
+Oct 13 11:36:11 gemma-h100-aue bash[54127]: test adapter::tests::quantized_adapter_training_cuda ... ok
+Oct 13 11:36:11 gemma-h100-aue bash[54127]: test adapter::tests::quantized_adapter_training_cpu ... ok
+Oct 13 11:36:11 gemma-h100-aue bash[54127]: test tests::quantized_head_checkpoint_roundtrip_and_policy_validation ... ok
+Oct 13 11:36:11 gemma-h100-aue bash[54127]: test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 1.21s
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling serde_core v1.0.229
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling syn v3.0.9
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling anyhow v1.0.104
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling aho-corasick v1.1.5
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling getrandom v0.4.3
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling smallvec v1.16.3
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling log v0.4.34
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling tracing-core v0.1.36
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling parking_lot_core v0.9.12
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling unicode-normalization-alignments v0.1.12
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling tempfile v3.27.0
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling parking_lot v0.12.5
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling tracing v0.1.44
+Oct 13 11:36:12 gemma-h100-aue bash[54198]:    Compiling regex-automata v0.4.18
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling synstructure v0.14.0
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling bytemuck_derive v1.12.1
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling serde_derive v1.0.229
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling thiserror-impl v2.0.21
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling zerofrom-derive v0.1.8
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling yoke-derive v0.8.4
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling serde_json v1.0.154
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling hashbrown v0.16.1
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling monostate v0.1.18
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling zerofrom v0.1.8
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling yoke v0.8.3
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling bytemuck v1.25.2
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling thiserror v2.0.21
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling half v2.7.1
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling num-complex v0.4.6
+Oct 13 11:36:13 gemma-h100-aue bash[54198]:    Compiling dyn-stack v0.13.2
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling pulp v0.22.3
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling float8 v0.7.0
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling cudarc v0.19.10
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling serde v1.0.229
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling fancy-regex v0.17.0
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling regex v1.13.1
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling fancy-regex v0.19.2
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling cudaforge v0.1.6
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling dary_heap v0.3.9
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling compact_str v0.9.1
+Oct 13 11:36:14 gemma-h100-aue bash[54198]:    Compiling spm_precompiled v0.1.4
+Oct 13 11:36:15 gemma-h100-aue bash[54198]:    Compiling ahash v0.8.12
+Oct 13 11:36:15 gemma-h100-aue bash[54198]:    Compiling safetensors v0.8.0
+Oct 13 11:36:15 gemma-h100-aue bash[54198]:    Compiling serde_plain v1.0.2
+Oct 13 11:36:15 gemma-h100-aue bash[54198]:    Compiling tokenizers v0.23.2
+Oct 13 11:36:15 gemma-h100-aue bash[54198]:    Compiling candle-kernels v0.11.0 (/home/azureuser/candle/candle-kernels)
+Oct 13 11:36:16 gemma-h100-aue bash[54198]:    Compiling gemm-common v0.19.0
+Oct 13 11:36:16 gemma-h100-aue bash[54198]:    Compiling gemm-f32 v0.19.0
+Oct 13 11:36:16 gemma-h100-aue bash[54198]:    Compiling gemm-c32 v0.19.0
+Oct 13 11:36:16 gemma-h100-aue bash[54198]:    Compiling gemm-c64 v0.19.0
+Oct 13 11:36:16 gemma-h100-aue bash[54198]:    Compiling gemm-f64 v0.19.0
+Oct 13 11:36:16 gemma-h100-aue bash[54198]:    Compiling gemm-f16 v0.19.0
+Oct 13 11:36:16 gemma-h100-aue bash[54198]:    Compiling gemm v0.19.0
+Oct 13 11:37:03 gemma-h100-aue bash[54198]: warning: candle-kernels@0.11.0: Compiling 11 of 11 PTX kernels
+Oct 13 11:37:03 gemma-h100-aue bash[54198]: warning: candle-kernels@0.11.0: Using 20 threads for compilation
+Oct 13 11:37:03 gemma-h100-aue bash[54198]: warning: candle-kernels@0.11.0: Compiling 15 of 15 kernels
+Oct 13 11:37:04 gemma-h100-aue bash[54198]:    Compiling candle-core v0.11.0 (/home/azureuser/candle/candle-core)
+Oct 13 11:37:08 gemma-h100-aue bash[54198]:    Compiling candle-nn v0.11.0 (/home/azureuser/candle/candle-nn)
+Oct 13 11:37:09 gemma-h100-aue bash[54198]:    Compiling candle-transformers v0.11.0 (/home/azureuser/candle/candle-transformers)
+Oct 13 11:37:33 gemma-h100-aue bash[54198]:     Finished `release` profile [optimized] target(s) in 1m 21s
+Oct 13 11:37:33 gemma-h100-aue bash[54198]:      Running tests/gemma4_lora_tests.rs (target/release/deps/gemma4_lora_tests-6512dc3cda094377)
+Oct 13 11:37:33 gemma-h100-aue bash[56200]: running 6 tests
+Oct 13 11:37:33 gemma-h100-aue bash[56200]: test rejects_invalid_or_duplicate_adapters_without_allocating_variables ... ok
+Oct 13 11:37:34 gemma-h100-aue bash[56200]: test q4_gradients_cross_two_layers_and_match_numerical_reference ... ok
+Oct 13 11:37:34 gemma-h100-aue bash[56200]: test streamed_constructors_match_conversion_and_reject_trainable_base ... ok
+Oct 13 11:37:34 gemma-h100-aue bash[56200]: test q4_bf16_cpu_master_casts_are_fresh ... ok
+Oct 13 11:37:34 gemma-h100-aue bash[56200]: test q4_f32_updates_every_adapter_and_freezes_base ... ok
+Oct 13 11:37:39 gemma-h100-aue bash[56200]: test q4_bf16_cuda_smoke ... ok
+Oct 13 11:37:39 gemma-h100-aue bash[56200]: test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.45s
+Oct 13 11:37:39 gemma-h100-aue bash[54198]:      Running tests/gemma4_quantized_decoder_tests.rs (target/release/deps/gemma4_quantized_decoder_tests-34851edd74d689ce)
+Oct 13 11:37:39 gemma-h100-aue bash[56255]: running 3 tests
+Oct 13 11:37:39 gemma-h100-aue bash[56255]: test rejects_trainable_weights_including_gradient_dependencies_before_conversion ... ok
+Oct 13 11:37:39 gemma-h100-aue bash[56255]: test rejects_unsupported_dtypes_and_unaligned_projection_dimensions ... ok
+Oct 13 11:37:40 gemma-h100-aue bash[56255]: test frozen_q4_q8_features_and_logits_stay_finite_and_close_to_dense ... ok
+Oct 13 11:37:40 gemma-h100-aue bash[56255]: test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.48s
+Oct 13 11:37:40 gemma-h100-aue bash[56338]: Usage: gemma4-training train [OPTIONS] --config <CONFIG> --dataset <DATASET> --output <OUTPUT>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]: Options:
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --mode <MODE>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: full] [possible values: full, quantized-head, quantized-lora]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --precision <PRECISION>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Compute dtype; adapter master weights, AdamW moments and loss remain F32 [default: f32] [possible values: f32, bf16]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --quantization <QUANTIZATION>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Frozen attention/MLP weights only; not QAT or full-parameter training [default: q4-0] [possible values: q4-0, q8-0]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --lora-rank <LORA_RANK>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 8]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --lora-alpha <LORA_ALPHA>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 8]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --adapter-checkpoint <ADAPTER_CHECKPOINT>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Warm-start adapters; still requires the original --checkpoint and mode
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --config <CONFIG>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --dataset <DATASET>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Directory produced by the preprocess subcommand
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --output <OUTPUT>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Fresh run directory; existing files are never overwritten
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --from-scratch
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Initialize random weights instead of loading a checkpoint
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --checkpoint <CHECKPOINT>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Local checkpoint directory. Reload is a warm start, not an optimizer resume
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --steps <STEPS>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 100]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --batch-size <BATCH_SIZE>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 1]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --gradient-accumulation-steps <GRADIENT_ACCUMULATION_STEPS>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Microbatches per optimizer update; graphs are released between backwards [default: 1]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --learning-rate <LEARNING_RATE>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 0.0001]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --weight-decay <WEIGHT_DECAY>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 0.01]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --max-grad-norm <MAX_GRAD_NORM>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 1]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --eval-every <EVAL_EVERY>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 10]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --eval-batches <EVAL_BATCHES>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 10]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --save-every <SAVE_EVERY>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           [default: 100]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --seed <SEED>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Seeds data order only; Candle CPU random initialization is not seedable [default: 42]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --max-parameters <MAX_PARAMETERS>
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Safety cap, not a memory guarantee. F32 AdamW requires >=16 bytes/parameter [default: 100000000]
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --cpu
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           CPU is the default. Mutually exclusive with --cuda
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:       --cuda
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Explicitly require CUDA device 0; never silently fall back to CPU
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:   -h, --help
+Oct 13 11:37:40 gemma-h100-aue bash[56338]:           Print help
+Oct 13 11:37:40 gemma-h100-aue systemd[1]: gemma4-lora-build-20261013.service: Deactivated successfully.
+Oct 13 11:37:40 gemma-h100-aue systemd[1]: gemma4-lora-build-20261013.service: Consumed 12min 54.445s CPU time.

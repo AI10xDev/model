@@ -1,0 +1,8 @@
+avx: true, neon: false, simd128: false, f16c: true
+temp: 0.00 repeat-penalty: 1.00 repeat-last-n: 64
+retrieved the files in 950.750879ms
+loaded the model in 132.51198592s
+synthetic capacity probe: 32768 prompt tokens, 2 requested samples (prompt not printed)
+. 
+2 tokens generated (0.05 token/s)
+report written to /home/azureuser/gemma4/context-sweep-20261018T0146/results/input-32768/inference.json

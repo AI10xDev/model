@@ -1,0 +1,293 @@
+{
+  "started_utc": "2026-10-18T01:47:01Z",
+  "source_summary": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json",
+  "source_trial": {
+    "name": "probe-32768",
+    "command": [
+      "/home/azureuser/candle/target/release/examples/gemma4",
+      "--model-id",
+      "google/gemma-4-31B-it",
+      "--revision",
+      "842da3794eaa0b77d5f08bae87a17459d91ff475",
+      "--adapter-checkpoint",
+      "/home/azureuser/gemma4/lora-q4-bf16-smoke-20261013/run/checkpoint-20",
+      "--prompt",
+      "<bos>The quick brown fox jumps over the lazy dog. ",
+      "--repeat-penalty",
+      "1",
+      "--report-file",
+      "/home/azureuser/gemma4/context-optim-1792221640-93574/probe-32768.json",
+      "--raw-prompt",
+      "--max-context",
+      "32770",
+      "--probe-prompt-tokens",
+      "32768",
+      "--sample-len",
+      "2",
+      "--ignore-eos"
+    ],
+    "status": "success",
+    "exit_code": 0,
+    "wall_seconds": 174.98108494700864,
+    "sampled_max_gpu_mib": 25717,
+    "prompt_tokens": 32768,
+    "generated_tokens": 2,
+    "forwarded_tokens": 32769,
+    "max_forwarded_position_zero_based": 32768,
+    "timings_seconds": {
+      "cached_decode_forward": 0.093734084,
+      "generation_wall": 40.356944018,
+      "model_load": 132.687171573,
+      "prefill_forward": 40.260488723,
+      "preparation": 0.95290143
+    },
+    "output_text": ". ",
+    "runtime_context": 32770,
+    "declared_context": 262144
+  },
+  "verified_provenance_sha256": {
+    "/home/azureuser/candle/target/release/examples/gemma4": "f87991d7995ea9ee3003fae8716d1e3396a6f1f777fe6762a9de31d092da7f01",
+    "/home/azureuser/gemma4/lora-q4-bf16-smoke-20261013/run/checkpoint-20/adapter.safetensors": "3649681403d7bd7048224543757a48625b45f05a754680c1caaa1b1cc12e563c",
+    "/home/azureuser/gemma4/lora-q4-bf16-smoke-20261013/run/checkpoint-20/training-state.json": "9fecc47cc106e306def8ca3e872b43417cba849dac2767eccfbb9506aeae56ce",
+    "/home/azureuser/gemma4/checkpoint/config.json": "e967dd38bc5cfd38bd09a995a7bf4a754075df2b46aba68f7fbb5a791e6d8dd1",
+    "/home/azureuser/gemma4/checkpoint/tokenizer.json": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+    "/home/azureuser/gemma4/checkpoint/model.safetensors.index.json": "d4aff3b976d69c123a29d1c085d7ba4de1ac3f4ca1726a7f81e1b11462a64ea2",
+    "/home/azureuser/gemma4/checkpoint/model-00001-of-00002.safetensors": "eeef8791537bc04f110967c513149e037d2a9ae97d49add7291ebfa62806bbfa",
+    "/home/azureuser/gemma4/checkpoint/model-00002-of-00002.safetensors": "018912220f559f7025d60333e0996183cd538aa77ad6f4988a89ce47be681f10"
+  },
+  "monitor_sha256": "23a3547aba52e3cb0109991ed30196ceedc31da5f0d70404efc1bb5ff510f10e",
+  "logical_cpus": 40,
+  "command": [
+    "/home/azureuser/candle/target/release/examples/gemma4",
+    "--model-id",
+    "google/gemma-4-31B-it",
+    "--revision",
+    "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "--adapter-checkpoint",
+    "/home/azureuser/gemma4/lora-q4-bf16-smoke-20261013/run/checkpoint-20",
+    "--prompt",
+    "<bos>The quick brown fox jumps over the lazy dog. ",
+    "--repeat-penalty",
+    "1",
+    "--report-file",
+    "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-32768/inference.json",
+    "--raw-prompt",
+    "--max-context",
+    "32770",
+    "--probe-prompt-tokens",
+    "32768",
+    "--sample-len",
+    "2",
+    "--ignore-eos"
+  ],
+  "gpu": "name, memory.total [MiB], driver_version\nNVIDIA H100 NVL, 95830 MiB, 615.71.09\n",
+  "conventions": "Approximately 1-second samples, including model loading. GPU device-wide. Host CPU 0-100% across all CPUs, iowait excluded. Process CPU 100% = one logical CPU. RAM used = MemTotal - MemAvailable; RSS includes resident file mappings. Means are sample means, peaks are sampled, not instantaneous. Final 60s is an observation window, not an exact inference phase.",
+  "baseline": {
+    "monotonic": 162179.440108187,
+    "cpu_total_ticks": 648669886,
+    "cpu_idle_ticks": 645979966,
+    "host_ram_total_mib": 322237.88671875,
+    "host_ram_used_mib": 4918.5078125,
+    "host_swap_used_mib": 0.0,
+    "process_cpu_ticks": null,
+    "process_rss_mib": null
+  },
+  "exit_code": 0,
+  "timed_out": false,
+  "telemetry_error": null,
+  "wall_seconds": 175.36555477499496,
+  "finished_utc": "2026-10-18T01:49:56Z",
+  "whole_process": {
+    "sample_count": 170,
+    "gpu_util_percent": {
+      "min": 0.0,
+      "mean": 24.935294117647057,
+      "max": 100.0
+    },
+    "gpu_memory_mib": {
+      "min": 0.0,
+      "mean": 16160.941176470587,
+      "max": 25717.0
+    },
+    "host_cpu_percent": {
+      "min": 2.5248846807477543,
+      "mean": 2.5763849241251684,
+      "max": 4.724409448818897
+    },
+    "process_cpu_percent_one_core": {
+      "min": 62.9632501646327,
+      "mean": 99.8791855330993,
+      "max": 101.11378722816137
+    },
+    "host_ram_used_mib": {
+      "min": 4998.73046875,
+      "mean": 6049.641750919118,
+      "max": 6201.4296875
+    },
+    "process_rss_mib": {
+      "min": 0.0,
+      "mean": 24582.876217830883,
+      "max": 59839.71875
+    },
+    "host_swap_used_mib": {
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    }
+  },
+  "final_60_seconds": {
+    "sample_count": 59,
+    "gpu_util_percent": {
+      "min": 0.0,
+      "mean": 66.05084745762711,
+      "max": 100.0
+    },
+    "gpu_memory_mib": {
+      "min": 755.0,
+      "mean": 23731.305084745763,
+      "max": 25717.0
+    },
+    "host_cpu_percent": {
+      "min": 2.5248846807477543,
+      "mean": 2.565284989635598,
+      "max": 2.597717892692401
+    },
+    "process_cpu_percent_one_core": {
+      "min": 98.7152761732817,
+      "mean": 100.0824473459625,
+      "max": 101.0082303570362
+    },
+    "host_ram_used_mib": {
+      "min": 5664.671875,
+      "mean": 5959.818392478814,
+      "max": 6201.4296875
+    },
+    "process_rss_mib": {
+      "min": 0.0,
+      "mean": 18295.72815148305,
+      "max": 59839.71875
+    },
+    "host_swap_used_mib": {
+      "min": 0.0,
+      "mean": 0.0,
+      "max": 0.0
+    }
+  },
+  "inference": {
+    "adapter_checkpoint": "/home/azureuser/gemma4/lora-q4-bf16-smoke-20261013/run/checkpoint-20",
+    "adapter_metadata": {
+      "adapter_checkpoint": null,
+      "adapter_initialization": "A: normal(0, 0.02); B: zero; RNG not seeded by --seed",
+      "adapter_target": "all decoder attention q/k/v/o and MLP gate/up/down projections; absent shared-KV v_proj excluded",
+      "batch_size": 1,
+      "device": "Cuda(CudaDevice(DeviceId(1)))",
+      "dtype": "bf16",
+      "eval_batches": 2,
+      "format_version": 1,
+      "frozen_parameters": "entire base model",
+      "gradient_accumulation_steps": 4,
+      "initialization_policy": "checkpoint warm start",
+      "initializer_range": null,
+      "learning_rate": 0.0001,
+      "lora_alpha": 8.0,
+      "lora_rank": 8,
+      "loss_dtype": "f32",
+      "master_dtype": "f32",
+      "max_grad_norm": 1.0,
+      "mode": "quantized-lora",
+      "objective": "all-token causal language modeling",
+      "optimizer": "AdamW",
+      "optimizer_dtype": "f32",
+      "optimizer_state_saved": false,
+      "parameters": 30697345340,
+      "quantization": "Q4_0",
+      "quantized_backward": "first-order input gradients; one transient F32 dequantized projection; frozen base weights",
+      "quantized_loading": "one dense decoder layer at a time, immediately quantized; no dense base copy retained",
+      "quantized_matmul_input_dtype": "f32 for Candle CUDA fallback compatibility; output cast to compute dtype",
+      "quantized_projections": 410,
+      "reload": "warm start only; optimizer and data-order restart",
+      "seed": 42,
+      "seed_scope": "data order only, not scratch initialization",
+      "sequence_length": 32,
+      "source_checkpoint": "/home/azureuser/gemma4/checkpoint",
+      "step": 20,
+      "steps_requested": 20,
+      "text_only": true,
+      "tokens_seen": 2560,
+      "train_loss": 0.30495959892868996,
+      "train_windows": 7,
+      "trainable_parameters": 61214720,
+      "valid_windows": 2,
+      "validation_loss": 1.717137575149536,
+      "validation_step": 20,
+      "weight_decay": 0.0
+    },
+    "cached_decode_steps": 1,
+    "cached_decode_tested": true,
+    "compute_dtype": "bf16",
+    "config_file": "/home/azureuser/gemma4/checkpoint/config.json",
+    "declared_context": 262144,
+    "device": "Cuda(CudaDevice(DeviceId(1)))",
+    "force_dmmv": false,
+    "format_version": 1,
+    "forwarded_position_convention": "For G > 0: forwarded_tokens = P + G - 1; maximum zero-based position = P + G - 2. The final sampled token is not forwarded. For G = 0: no forward, maximum position null.",
+    "forwarded_tokens": 32769,
+    "generated_token_ids": [
+      236761,
+      236743
+    ],
+    "generated_tokens": 2,
+    "ignore_eos": true,
+    "max_forwarded_position_zero_based": 32768,
+    "mode": "capacity-probe",
+    "model_id": "google/gemma-4-31B-it",
+    "output_text": ". ",
+    "prefill_tested": true,
+    "prompt": "<bos>The quick brown fox jumps over the lazy dog. ",
+    "prompt_tokens": 32768,
+    "raw_prompt": true,
+    "requested_generation_tokens": 2,
+    "revision": "842da3794eaa0b77d5f08bae87a17459d91ff475",
+    "runtime_context": 32770,
+    "sampling": {
+      "repeat_last_n": 64,
+      "repeat_penalty": 1.0,
+      "seed": 299792458,
+      "temperature": 0.0,
+      "top_k": null,
+      "top_p": null
+    },
+    "seed_prompt_token_ids": [
+      2,
+      818,
+      3823,
+      8864,
+      37423,
+      38167,
+      1024,
+      506,
+      31770,
+      4799,
+      236761,
+      236743
+    ],
+    "status": "success",
+    "stopped_on_eos": false,
+    "synthetic_prompt_method": "repeat seed token IDs, preserving initial BOS once when seed has other tokens; truncate to exact size",
+    "timing_convention": "Device synchronized around each forward; forward timings include input upload, exclude sampling/output. Generation wall includes sampling and streamed output.",
+    "timings_seconds": {
+      "cached_decode_forward": 0.092607696,
+      "generation_wall": 40.210849214,
+      "model_load": 132.51198565,
+      "prefill_forward": 40.115803516,
+      "preparation": 0.950776119
+    },
+    "tokenizer_file": "/home/azureuser/gemma4/checkpoint/tokenizer.json",
+    "use_flash_attn": false,
+    "weight_files": [
+      "/home/azureuser/gemma4/checkpoint/model-00001-of-00002.safetensors",
+      "/home/azureuser/gemma4/checkpoint/model-00002-of-00002.safetensors"
+    ]
+  },
+  "status": "success"
+}

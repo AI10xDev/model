@@ -1,0 +1,7 @@
+avx: true, neon: false, simd128: false, f16c: true
+temp: 0.00 repeat-penalty: 1.00 repeat-last-n: 64
+retrieved the files in 965.070047ms
+loaded the model in 134.489695025s
+the small red cat sees the blue dog the small blue dog likes the red cat the cat sleeps and the dog runs today
+21 tokens generated (19.22 token/s)
+report written to /home/azureuser/gemma4/context-evidence-20261014-v2/generation-training-prefix.json

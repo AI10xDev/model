@@ -1,0 +1,3 @@
+14bc42b59a176e60f129f8e99f91b16e44a16c7a14d20fe9415e7dc34cdc0bde  /home/azureuser/candle/target/release/examples/gemma4-training
+2ada9e83b73a23653b639c098b9bc19aa3b7427f10282744dc481dfe062d4ffe  /home/azureuser/candle/candle-examples/examples/gemma4-training/fixtures/train.jsonl
+e967dd38bc5cfd38bd09a995a7bf4a754075df2b46aba68f7fbb5a791e6d8dd1  /home/azureuser/gemma4/checkpoint/config.json

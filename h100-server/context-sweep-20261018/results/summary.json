@@ -1,0 +1,238 @@
+{
+  "status": "running",
+  "started_utc": "2026-10-18T01:46:22Z",
+  "runner_pid": 113193,
+  "source_summary": "/home/azureuser/gemma4/context-optim-1792221640-93574/summary.json",
+  "source_snapshot": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json",
+  "boundary_summary": "/home/azureuser/gemma4/context-load-20261018/summary.json",
+  "declared_context": 262144,
+  "verified_provenance_sha256": {
+    "/home/azureuser/candle/target/release/examples/gemma4": "f87991d7995ea9ee3003fae8716d1e3396a6f1f777fe6762a9de31d092da7f01",
+    "/home/azureuser/gemma4/lora-q4-bf16-smoke-20261013/run/checkpoint-20/adapter.safetensors": "3649681403d7bd7048224543757a48625b45f05a754680c1caaa1b1cc12e563c",
+    "/home/azureuser/gemma4/lora-q4-bf16-smoke-20261013/run/checkpoint-20/training-state.json": "9fecc47cc106e306def8ca3e872b43417cba849dac2767eccfbb9506aeae56ce",
+    "/home/azureuser/gemma4/checkpoint/config.json": "e967dd38bc5cfd38bd09a995a7bf4a754075df2b46aba68f7fbb5a791e6d8dd1",
+    "/home/azureuser/gemma4/checkpoint/tokenizer.json": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f",
+    "/home/azureuser/gemma4/checkpoint/model.safetensors.index.json": "d4aff3b976d69c123a29d1c085d7ba4de1ac3f4ca1726a7f81e1b11462a64ea2",
+    "/home/azureuser/gemma4/checkpoint/model-00001-of-00002.safetensors": "eeef8791537bc04f110967c513149e037d2a9ae97d49add7291ebfa62806bbfa",
+    "/home/azureuser/gemma4/checkpoint/model-00002-of-00002.safetensors": "018912220f559f7025d60333e0996183cd538aa77ad6f4988a89ce47be681f10"
+  },
+  "method": "Serial synthetic probes. Exact full-budget success establishes the maximum under runtime policy, not output quality. Timeout, OOM and other failures leave the maximum inconclusive; no bisection. 262144 input has zero architectural output budget, not measured prefill.",
+  "active_trial": "output-32768",
+  "completed_results": [
+    {
+      "name": "input-32768",
+      "status": "success",
+      "summary_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-32768/summary.json",
+      "log_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-32768.log",
+      "started_utc": "2026-10-18T01:46:22Z",
+      "finished_utc": "2026-10-18T01:49:56Z"
+    },
+    {
+      "name": "input-65536",
+      "status": "success",
+      "summary_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-65536/summary.json",
+      "log_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-65536.log",
+      "started_utc": "2026-10-18T01:49:56Z",
+      "finished_utc": "2026-10-18T01:54:39Z"
+    },
+    {
+      "name": "input-131072",
+      "status": "success",
+      "summary_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-131072/summary.json",
+      "log_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-131072.log",
+      "started_utc": "2026-10-18T01:54:39Z",
+      "finished_utc": "2026-10-18T02:03:53Z"
+    }
+  ],
+  "inputs": [
+    {
+      "prompt_tokens": 32768,
+      "architectural_output_budget": 229376,
+      "measured_prefill": true,
+      "maximum_status": "running",
+      "maximum_output_tokens": null,
+      "verified_output_lower_bound": 2,
+      "lower_bound_evidence": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json"
+    },
+    {
+      "prompt_tokens": 65536,
+      "architectural_output_budget": 196608,
+      "measured_prefill": true,
+      "maximum_status": "pending",
+      "maximum_output_tokens": null,
+      "verified_output_lower_bound": 2,
+      "lower_bound_evidence": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json"
+    },
+    {
+      "prompt_tokens": 131072,
+      "architectural_output_budget": 131072,
+      "measured_prefill": true,
+      "maximum_status": "pending",
+      "maximum_output_tokens": null,
+      "verified_output_lower_bound": 2,
+      "lower_bound_evidence": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json"
+    },
+    {
+      "prompt_tokens": 262142,
+      "architectural_output_budget": 2,
+      "measured_prefill": true,
+      "maximum_status": "success",
+      "maximum_output_tokens": 2,
+      "verified_output_lower_bound": 2,
+      "evidence": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/boundary-summary.json",
+      "reused": true
+    },
+    {
+      "prompt_tokens": 262144,
+      "architectural_output_budget": 0,
+      "measured_prefill": false,
+      "maximum_status": "architectural-budget-only",
+      "maximum_output_tokens": null
+    }
+  ],
+  "trials": [
+    {
+      "name": "input-32768",
+      "phase": "input",
+      "prompt_tokens": 32768,
+      "requested_output_tokens": 2,
+      "runtime_context": 32770,
+      "status": "success",
+      "command": [
+        "/usr/bin/python3",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/measure-inference-load.py",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-32768",
+        "--trial",
+        "probe-32768",
+        "--timeout",
+        "12000"
+      ],
+      "summary_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-32768/summary.json",
+      "log_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-32768.log",
+      "started_utc": "2026-10-18T01:46:22Z",
+      "exit_code": 0,
+      "finished_utc": "2026-10-18T01:49:56Z"
+    },
+    {
+      "name": "input-65536",
+      "phase": "input",
+      "prompt_tokens": 65536,
+      "requested_output_tokens": 2,
+      "runtime_context": 65538,
+      "status": "success",
+      "command": [
+        "/usr/bin/python3",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/measure-inference-load.py",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-65536",
+        "--trial",
+        "probe-65536",
+        "--timeout",
+        "12000"
+      ],
+      "summary_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-65536/summary.json",
+      "log_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-65536.log",
+      "started_utc": "2026-10-18T01:49:56Z",
+      "exit_code": 0,
+      "finished_utc": "2026-10-18T01:54:39Z"
+    },
+    {
+      "name": "input-131072",
+      "phase": "input",
+      "prompt_tokens": 131072,
+      "requested_output_tokens": 2,
+      "runtime_context": 131074,
+      "status": "success",
+      "command": [
+        "/usr/bin/python3",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/measure-inference-load.py",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-131072",
+        "--trial",
+        "probe-131072",
+        "--timeout",
+        "12000"
+      ],
+      "summary_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-131072/summary.json",
+      "log_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/input-131072.log",
+      "started_utc": "2026-10-18T01:54:39Z",
+      "exit_code": 0,
+      "finished_utc": "2026-10-18T02:03:53Z"
+    },
+    {
+      "name": "output-32768",
+      "phase": "output",
+      "prompt_tokens": 32768,
+      "requested_output_tokens": 229376,
+      "runtime_context": 262144,
+      "status": "running",
+      "command": [
+        "/usr/bin/python3",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/measure-inference-load.py",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/output-32768",
+        "--trial",
+        "probe-32768",
+        "--timeout",
+        "172800",
+        "--sample-len",
+        "229376",
+        "--max-context",
+        "262144"
+      ],
+      "summary_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/output-32768/summary.json",
+      "log_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/output-32768.log",
+      "started_utc": "2026-10-18T02:03:53Z"
+    },
+    {
+      "name": "output-65536",
+      "phase": "output",
+      "prompt_tokens": 65536,
+      "requested_output_tokens": 196608,
+      "runtime_context": 262144,
+      "status": "pending",
+      "command": [
+        "/usr/bin/python3",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/measure-inference-load.py",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/output-65536",
+        "--trial",
+        "probe-65536",
+        "--timeout",
+        "172800",
+        "--sample-len",
+        "196608",
+        "--max-context",
+        "262144"
+      ],
+      "summary_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/output-65536/summary.json",
+      "log_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/output-65536.log"
+    },
+    {
+      "name": "output-131072",
+      "phase": "output",
+      "prompt_tokens": 131072,
+      "requested_output_tokens": 131072,
+      "runtime_context": 262144,
+      "status": "pending",
+      "command": [
+        "/usr/bin/python3",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/measure-inference-load.py",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/source-summary.json",
+        "/home/azureuser/gemma4/context-sweep-20261018T0146/results/output-131072",
+        "--trial",
+        "probe-131072",
+        "--timeout",
+        "172800",
+        "--sample-len",
+        "131072",
+        "--max-context",
+        "262144"
+      ],
+      "summary_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/output-131072/summary.json",
+      "log_path": "/home/azureuser/gemma4/context-sweep-20261018T0146/results/output-131072.log"
+    }
+  ],
+  "updated_utc": "2026-10-18T02:03:53Z"
+}

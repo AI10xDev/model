@@ -1,0 +1,11 @@
+avx: true, neon: false, simd128: false, f16c: true
+temp: 0.00 repeat-penalty: 1.00 repeat-last-n: 64
+retrieved the files in 954.869717ms
+loaded the model in 134.245563431s
+user
+Explain in two sentences why the sky appears blue.
+model
+thought
+Sunlight reaches Earth's atmosphere and is scattered in all directions by the gases and particles in the air. Blue light is scattered more than other colors because it travels as shorter, smaller waves, making the sky appear blue to our eyes.
+49 tokens generated (20.58 token/s)
+report written to /home/azureuser/gemma4/context-evidence-20261014-v2/generation-instruction.json

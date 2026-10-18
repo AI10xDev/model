@@ -1,0 +1,38 @@
+{
+  "bos_token_id": 2,
+  "eos_token_id": 1,
+  "format_version": 1,
+  "input": "/home/azureuser/gemma4/training-context-evidence-20261014/screen-512/synthetic.jsonl",
+  "layout": "contiguous token stream, no header or padding",
+  "seed": 42,
+  "sequence_length": 512,
+  "split_algorithm": "rand 0.9 StdRng seeded shuffle; first floor(documents * validation_fraction) documents are validation",
+  "stride": 512,
+  "token_format": "u32-le",
+  "tokenizer": {
+    "add_special_tokens": false,
+    "bytes": 32169626,
+    "copy": "tokenizer.json",
+    "padding": false,
+    "source": "/home/azureuser/gemma4/checkpoint/tokenizer.json",
+    "truncation": false,
+    "vocabulary_entries_including_added": 262144
+  },
+  "train": {
+    "documents": 6,
+    "dropped_tail_tokens": 101,
+    "stored_tokens": 30721,
+    "tokens_before_packing": 30822,
+    "windows": 60
+  },
+  "valid": {
+    "documents": 2,
+    "dropped_tail_tokens": 33,
+    "stored_tokens": 10241,
+    "tokens_before_packing": 10274,
+    "windows": 20
+  },
+  "validation_fraction": 0.25,
+  "vocab_size": 262144,
+  "window_length": 513
+}

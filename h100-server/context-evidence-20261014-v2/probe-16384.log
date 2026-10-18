@@ -1,0 +1,6 @@
+avx: true, neon: false, simd128: false, f16c: true
+temp: 0.00 repeat-penalty: 1.00 repeat-last-n: 64
+retrieved the files in 971.179084ms
+loaded the model in 134.177975641s
+synthetic capacity probe: 16384 prompt tokens, 2 requested samples (prompt not printed)
+Error: DriverError(CUDA_ERROR_INVALID_VALUE, "invalid argument")

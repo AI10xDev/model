@@ -1,0 +1,3 @@
+{"step":0,"validation_loss":2.1437078714370728}
+{"gradient_norm":135.19968321861668,"step":1,"tokens_seen":512,"train_loss":2.159951090812683}
+{"gradient_norm":4.819461220691838,"step":2,"tokens_seen":1024,"train_loss":0.5075163543224335,"validation_loss":0.7432473376393318}
